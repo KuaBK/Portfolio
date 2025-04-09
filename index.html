@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <img src="./assets/Logo.png" alt="Logo" class="logo-img" />
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">NGUYEN TUAN PHONG</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/z6488635851281_0200f71af0b33109fb282e339a8d52ca.jpg" alt="John Doe profile picture" class="profile-pic"/>
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">NGUYEN TUAN PHONG</h1>
+            <p class="section__text__p2">Backend Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/My-Resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-2" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/tu%E1%BA%A5n-phong-nguy%E1%BB%85n-22965135a/'" />
+                <img src="./assets/github.png" alt="My Github profile" class="icon"
+                    onclick="location.href='https://github.com/KuaBK'" />
+                <img src="./assets/facebook.png" alt="My Facebook profile" class="icon"
+                    onclick="location.href='https://www.facebook.com/phong.nguyen.17085/'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+            </div>
+            <div class="about-details-container">
+                <div class="info-container">
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>Ho Chi Minh City University of Technology<br />Major: Computer Science (2022 – Present)</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                        <h3>Certificate</h3>
+                        <p>Scrum/Agile<br />Subject: Advanced Software Engineer<br /> (AXON ACTIVE)</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I am about to begin an internship as a <strong>Java Backend Developer</strong>, where I hope to
+                        apply what
+                        I've learned and gain real-world experience in building scalable web applications.
+                        <br />
+                        <br />
+                        In the <strong>short term</strong>, my goal is to become a proficient backend developer, capable
+                        of contributing to production-level projects.
+                        <br />
+                        In the <strong>long term</strong>, I aim to grow into a full-stack engineer or
+                        technical leader who can design and lead impactful software solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Technologies</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/html.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>HTML</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/CSS.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>CSS</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/Java-Script-Logo--Streamline-Ultimate.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>JavaScript</h3>
+
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/z6488396487742_40bfb5f5b0b8b63db116e54ae80fa1f3.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Bootstrap</h3>
+
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Backend Technologies</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/Java-Logo--Streamline-Ultimate.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Java</h3>
+                                <p></p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/z6488389659857_8f9be0b98e44fea71556ddbede703ecd.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Spring Boot</h3>
+                                <p></p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Databases</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/z6488404971637_b5b8a35581df2dd828208b97d1fbf2b0.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>MySQL</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/z6488404648753_97a4aba0ae7a1637369787a13f59eb60.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>MongoDB</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Tools</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/z6488386013928_05758bbceb1a9438803270fb67683360.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Postman</h3>
+                                <p></p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/z6488385339345_83ad98c2aac6242cfee8e587e9b20110.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Swagger UI</h3>
+                                <p></p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/z6488404378948_e5e864b3923cc12aabf91059437c8c67.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Docker</h3>
+                                <p></p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/z6488390467611_4af0feafd5894bb1beb2bad17e16eb43.jpg" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Git/Github</h3>
+                                <p></p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="project-containers">
+                <div class="col3">
+                    <div class="details-container color-container">
+                        <div class="project-pic-container">
+                            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+                            <img src="./assets/e-commerce2.jpg" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">E-commerce Website (B2C)</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/KuaBK/E-commerce-Website'">
+                                Github
+                            </button>
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='http://fpsshop.pro/home/'">
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="project-pic-container">
+                            <img src="./assets/pro22.jpg" alt="Project 1" class="project-img" />
+                            <img src="./assets/pro21.jpg" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Asset Management System</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/KuaBK/Asset-Management-System'">
+                                Github
+                            </button>
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://asset-management-system-git-main-kuabks-projects.vercel.app/'">
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="project-pic-container">
+                            <img src="./assets/10.4.2.png" alt="Project 1" class="project-img" />
+                            <img src="./assets/10.4.5.png" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Human Resource Management</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/KuaBK/Human-Rescource-Website'">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col3">
+                    <div class="details-container color-container">
+                        <div class="project-pic-container">
+                            <img src="./assets/Homepage.png" alt="Project 1" class="project-img" />
+                            <img src="./assets/configprinter.png" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Student Smart Printing Service</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/KuaBK/Smart-Printing-Service-Website'">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="project-pic-container">
+                            <img src="./assets/z6489562045393_8d08601f46bb58435902baa502adf9d7.jpg" alt="Project 1" class="project-img" />
+                            <img src="./assets/z6489560907409_00feec1c954b53f126725f0f525041a1.jpg" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Hospital Management Website</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/KuaBK/Hospital-Management-Website'">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <p><a href="mailto:tuanphonglqd@gmail.com">tuanphonglqd@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/tu%E1%BA%A5n-phong-nguy%E1%BB%85n-22965135a/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
