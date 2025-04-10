@@ -200,11 +200,11 @@ section {
 /* PROFILE SECTION */
 
 .profile-pic{
-        width: 400px;       /* hoặc kích thước mong muốn */
-        height: 400px;
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng container */
+  height: 100%;
         object-fit: cover;  /* đảm bảo ảnh không bị méo */
         border-radius: 50%;
-        border: 2px solid #ccc; /* optional: thêm viền */
+        border: 3px solid black; /* optional: thêm viền */
 }
 
 #profile {
@@ -216,8 +216,8 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 630px;
+  width: 630px;
   margin: auto 0;
   position: relative;
   flex-direction: column;
