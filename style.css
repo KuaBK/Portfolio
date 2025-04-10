@@ -19,6 +19,36 @@ p {
   color: rgb(85, 85, 85);
 }
 
+#typing-text {
+  font-size: 2rem;
+  font-weight: regular;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blink 0.75s step-end infinite;
+  display: inline-block;
+  width: 350px;
+}
+
+#typing-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  from, to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
+}
+
+
+
 /* TRANSITION */
 
 a,
@@ -189,7 +219,87 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  position: relative;
+  flex-direction: column;
 }
+/* From Uiverse.io by vinodjangid07 */ 
+.card {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-left: 3px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvgfb path,
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+.socialContainer:hover .socialSvgfb {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 
 
 .section__text {
@@ -324,6 +434,7 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  height: 400px;
 }
 
 .arrow {
@@ -341,6 +452,62 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+
+.detailsb-container,
+.detailsa-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: white;
+  transition: color 0.3s ease;
+  z-index: 1;
+  display: flex;
+  text-align: center;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center; 
+  flex-direction: column;
+}
+
+.detailsb-container::before,
+.detailsa-container::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  /* left: -100%; */
+  width: 100%;
+  height: 100%;
+  transition: top 0.5s ease;
+  z-index: -1;
+}
+
+.detailsb-container::before {
+  background: linear-gradient(135deg, #fff9ec, #fce7ba);
+}
+
+.detailsa-container::before {
+  background: linear-gradient(135deg, #c2dbf5, #a6c8ec);
+}
+
+.detailsb-container:hover::before,
+.detailsa-container:hover::before {
+  /* left: 0; */
+  top: 0;
+}
+
+.detailsb-container:hover,
+.detailsa-container:hover {
+  color: black; 
+}
+
+.detailsb-container:hover p,
+.detailsa-container:hover p{
+  color: black; /* chuyển text sang trắng để nổi bật */
+}
+
 
 
 
@@ -485,6 +652,118 @@ section {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+/* From Uiverse.io by vinodjangid07 */ 
+.card a{
+  padding-right: 0px;
+}
+
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* Facebook*/
+.containerTwo:hover {
+  background-color: #1877f2;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Tiktok*/
+.containerFour:hover {
+  background-color: #25f4ee;
+  transition-duration: 0.3s;
+}
+
+
+.socialSvgfb{
+  width: 23px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* From Uiverse.io by aguerquin */ 
+.button-icon {
+  display: flex;
+  border: 3px black solid;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.icongithub {
+  background-color: #fff;
+  padding: 10px 10px 5px 10px;
+}
+
+.icongithub svg {
+  width: 25px;
+  height: 25px;
+}
+
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+}
+
+.button-icon:hover {
+  border-color: #FF4500;
+}
+
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  height: 47px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.top {
+  background: #FF4500;
+  color: #fff;
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front {
+  background: #222229;
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
+}
+
 
 /* CONTACT */
 
@@ -711,16 +990,94 @@ textarea.form-input {
   background-color: #ff5f59;
 }
 
+/* ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.from-left, .from-right {
+  opacity: 0;
+  transform: translateX(100px); /* mặc định là từ phải */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.from-left {
+  transform: translateX(-100px); /* nếu từ trái thì trượt ngược */
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* From Uiverse.io by joe-watson-sbf */ 
+.flip-card {
+  display: flex;
+ height: 400px;
+ width: 600px;
+ margin: auto 0;
+ position: relative;
+ flex-direction: column;
+}
+
+.title {
+ font-size: 1.5em;
+ font-weight: 900;
+ text-align: center;
+ margin: 0;
+}
+
+.flip-card-inner {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ transition: transform 0.8s;
+ transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+ transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+ box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 100%;
+ height: 100%;
+ -webkit-backface-visibility: hidden;
+ backface-visibility: hidden;
+ border: 1px solid coral;
+ border-radius: 2rem;
+}
+
+.flip-card-front {
+ background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+    rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+ color: coral;
+}
+
+.flip-card-back {
+ background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+    bisque 40%, rgb(255, 185, 160) 78%);
+ color: white;
+ transform: rotateY(180deg);
+}
 
 
 
 
 /* FOOTER SECTION */
 
-footer {
-  height: 26vh;
-  margin: 0 1rem;
-}
 
 footer p {
   text-align: center;
