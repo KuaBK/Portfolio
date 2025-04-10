@@ -191,6 +191,7 @@ section {
   margin: auto 0;
 }
 
+
 .section__text {
   align-self: center;
   text-align: center;
@@ -343,16 +344,13 @@ section {
 
 
 
+
+
 .section-container {
   gap: 4rem;
   height: 80%;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
 
 /* EXPERIENCE SECTION */
 
@@ -414,6 +412,9 @@ section {
 .project-pic-container img:hover {
   transform: scale(1.05);
 }
+
+
+
 
 .modal {
   display: none;
@@ -524,6 +525,195 @@ section {
 .email-icon {
   height: 2.5rem;
 }
+
+.contactForm {
+  display: block; /* Ẩn form mặc định */
+  opacity: 1; /* Bắt đầu với độ trong suốt */
+  transform: translateY(-20px); /* Dịch chuyển lên trên một chút */
+  transform: translateY(0); /* Hiệu ứng mượt */
+  background-color: #f9f9f9; /* Màu nền form */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form .button {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form .button:hover {
+  background-color: #0056b3;
+}
+
+/* SCROLL TO TOP BUTTON */
+
+.btt {
+  position: fixed;
+  top: 65%; /* Căn giữa theo chiều dọc */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa chính xác */
+  z-index: 1000; /* Đảm bảo nút nằm trên các phần tử khác */
+}
+
+.button-btt {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0px 0px 0px 4px #FF4500;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button-btt:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: white;
+  align-items: center;
+}
+
+.button-btt:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button-btt::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: black;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button-btt:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+
+.modalcontact {
+  display: none; /* Ẩn mặc định */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Background mờ */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.closeform {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.colorful-form {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+
+textarea.form-input {
+  height:220px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f69;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #ff5f59;
+}
+
+
+
+
 
 /* FOOTER SECTION */
 
