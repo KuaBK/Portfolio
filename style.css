@@ -200,8 +200,8 @@ section {
 /* PROFILE SECTION */
 
 .profile-pic{
-  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng container */
-  height: 100%;
+  width: 90%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng container */
+  height: 90%;
         object-fit: cover;  /* đảm bảo ảnh không bị méo */
         border-radius: 50%;
         border: 3px solid black; /* optional: thêm viền */
@@ -212,6 +212,8 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  transform: scale(1.2);
+  margin-bottom: 2rem;
 }
 
 .section__pic-container {
@@ -434,7 +436,9 @@ section {
 
 .about-pic {
   border-radius: 2rem;
-  height: 400px;
+  width: 100%; /* Chiều rộng ảnh vừa với card */
+  height: 100%; /* Chiều cao ảnh vừa với card */
+  object-fit: cover; /* Đảm bảo ảnh giữ tỷ lệ và cắt phần thừa */
 }
 
 .arrow {
@@ -451,6 +455,7 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .detailsb-container,
@@ -568,7 +573,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; /* Đặt chiều cao cố định cho ảnh */
+    overflow: hidden; /* Ẩn phần thừa nếu ảnh quá lớn */
 }
 
 .project-pic-container img {
@@ -639,8 +645,9 @@ section {
 
 .project-img {
   border-radius: 2rem;
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-title {
@@ -1019,8 +1026,9 @@ textarea.form-input {
 /* From Uiverse.io by joe-watson-sbf */ 
 .flip-card {
   display: flex;
- height: 400px;
- width: 600px;
+ height: 80%;
+ width: 60%;
+ perspective: 1000px;
  margin: auto 0;
  position: relative;
  flex-direction: column;
@@ -1056,19 +1064,17 @@ textarea.form-input {
  height: 100%;
  -webkit-backface-visibility: hidden;
  backface-visibility: hidden;
- border: 1px solid coral;
+ /* border: 1px solid coral; */
  border-radius: 2rem;
+ overflow: hidden; 
 }
 
 .flip-card-front {
- background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
-    rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
- color: coral;
+ background: white;
 }
 
 .flip-card-back {
- background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
-    bisque 40%, rgb(255, 185, 160) 78%);
+ background: white;
  color: white;
  transform: rotateY(180deg);
 }
